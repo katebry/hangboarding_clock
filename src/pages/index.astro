@@ -5,9 +5,14 @@ import Clock from '../components/Clock';
 
 <Layout title="Hangboarding clock">
 	<main>
-		<h1>Time your hangs 🧗‍♀️👇🏻</h1>
+		<h1>Time your hangs ⏱👇🏻</h1>
 		<div class="main-content">
-			<Clock client:load></Clock>
+			<div class="clock-wrapper">
+				<Clock client:load></Clock>
+			</div>
+		</div>
+		<div class="set-section">
+			<p>Sets</p>
 		</div>
 	</main>
 </Layout>
@@ -28,9 +33,16 @@ import Clock from '../components/Clock';
 		font-weight: 800;
 	}
 	.main-content {
+		grid-area: 2 / 2 / 4 / 3;
+		display: flex;
+		justify-content: center;
+		font-size: 4em;
+	}
+	.set-section {
+		grid-area: 4 / 2 / 5 / 3;
 		display: flex;
 		justify-content: center;
 		font-size: 3em;
-		grid-area: 2 / 2 / 5 / 3;
 	}
+
 </style>
